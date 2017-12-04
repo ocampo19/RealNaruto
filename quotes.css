@@ -1,0 +1,100 @@
+html {
+    background: black;
+}
+
+.contain-head {
+    background: black;
+}
+
+header {
+    border: groove thin #e6e6e6;
+    padding: 17px 0;
+}
+
+header .row {
+    display: flex;
+    align-items: center;
+}
+
+header h1 {
+    color: white;
+    font-family: 'Bungee Shade', cursive;
+    font-size: 4rem;
+}
+
+header nav {
+  display: flex;
+  justify-content: flex-end;
+  font-family: 'Anton', sans-serif;
+}
+
+nav a {
+    padding: 0 20px;
+    margin: 0;
+    color: #f35516;
+}
+
+.main-container {
+    background: url("/images/leaf.png") repeat;
+    padding: 50px 0;
+}
+
+#jumbo {
+    padding: 20px 0;
+}
+
+.text-center {
+    color: black;
+}
+
+#faceImg-container img {
+    border: 2px solid white;
+    border-radius: 100%;
+    display: inline-block;
+    width: 20%;
+    height: 170px;
+}
+
+#faceImg-container h2 {
+    padding-top: 10px;
+}
+
+.quote-box {
+    background-color: rgba(255, 255, 255, 0.6);
+    border-radius: 5.625rem;
+    width: 50%;
+    height: 165px;
+    position: relative;
+    left: 25%;
+}
+
+#quote-text {
+    font-family: Roboto, sans-serif;
+    font-size: 2rem;
+    padding: 1.5625rem 2.1875rem 1rem 2.1875rem;
+    margin-bottom: 20px;
+    color: black;
+    line-height: 2.7rem;
+}
+
+#q-button {
+  font-family: Comfortaa, cursive;
+  text-align: center;
+  font-size: 1.5rem;
+  color: black;
+  padding: 0.62rem 0.875rem;
+  border-radius: 5px;
+  margin: 20px 0;
+  /*position: relative;
+  left: 46%;*/
+}
+
+footer p {
+    font-family: 'Roboto', sans-serif;
+    color: #a6a6a6;
+    padding: 10px 0;
+}
+
+#footer-container {
+    background: #262626;
+}
