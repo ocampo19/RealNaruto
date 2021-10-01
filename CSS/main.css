@@ -3,3 +3,87 @@
     padding: 0;
 }
 
+body {
+    background-color: #101010;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    width: 95%;
+    margin: auto;
+    overflow: auto;
+}
+
+header h1 {
+    font-size: 55px;
+    font-family: 'Bungee Shade', sans-serif;
+}
+
+header h1 a {
+    text-decoration: none;
+    color: rgba(255, 255, 255, 0.849);
+}
+
+header nav {
+    display: flex;
+    justify-content: flex-end;
+    align-self: center;
+}
+
+header nav .nav-link {
+    font-family: anton, sans-serif;
+    font-size: 32px;
+    padding: 10px 18px;
+    text-decoration: none;
+    color: rgb(247, 66, 0);
+}
+
+header nav .nav-link:hover {
+    text-decoration: underline;
+    color: rgb(247, 96, 0);
+}
+
+.about {
+    padding-top: 100px;
+    width: 80%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.about p {
+    text-align: center;
+    font-family: Roboto, sans-serif;
+    font-size: 150%;
+    line-height: 150%;
+    color: rgba(255, 255, 255, 0.767);
+}
+
+footer {
+    width: 95%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    color:rgba(255, 255, 255, 0.767);
+    padding-top: 12%;
+}
+
+footer h3 {
+    border-top: solid thin rgba(255, 255, 255, 0.363);
+}
+
+footer a {
+    padding-top: 10px;
+    font-size: 125%;
+    color: rgb(247, 66, 0);
+    text-decoration: none;
+    width: fit-content;
+}
+
+footer a:hover {
+    color: rgb(247, 96, 0);
+    text-decoration: underline;
+}
