@@ -7,6 +7,8 @@ body {
     background-color: #101010;
 }
 
+/** ------------ H E A D E R ------------ **/
+
 header {
     display: flex;
     justify-content: space-between;
@@ -44,43 +46,58 @@ header nav .nav-link:hover {
     color: rgb(247, 96, 0);
 }
 
-.about {
-    padding-top: 100px;
-    width: 80%;
+/** ------------ M A I N - C O N T A I N E R ------------ **/
+
+.main-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    align-content: center;
+    width: 70%;
     margin: auto;
+    padding-top: 100px;
+}
+
+/** ------------ A B O U T ------------ **/
+
+.about {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
+    align-content: center;
 }
 
 .about p {
     text-align: center;
-    font-family: Roboto, sans-serif;
+    font-family: Bungee, Roboto, sans-serif;
     font-size: 150%;
     line-height: 150%;
     color: rgba(255, 255, 255, 0.767);
 }
 
+/** ------------ F O O T E R ------------ **/
+
 footer {
-    width: 95%;
-    margin: auto;
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
     color:rgba(255, 255, 255, 0.767);
+    width: 100%;
     padding-top: 12%;
+    padding-bottom: 20px;
 }
 
 footer h3 {
     border-top: solid thin rgba(255, 255, 255, 0.363);
+    padding: 12px 0 0 2%;
 }
 
 footer a {
-    padding-top: 10px;
+    padding-top: 7px;
+    padding-left: 2%;
     font-size: 125%;
     color: rgb(247, 66, 0);
     text-decoration: none;
-    width: fit-content;
 }
 
 footer a:hover {
