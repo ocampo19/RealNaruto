@@ -3,62 +3,47 @@
     <head>
         <meta charset="utf-8">
         <title>Real Naruto | Characters</title>
-        <link rel="stylesheet" type="text/css" href="quotes.css"/>
+        <link rel="stylesheet" type="text/css" href="/CSS/quotes.css"/>
         <link href="https://fonts.googleapis.com/css?family=Anton|Audiowide|Bungee+Shade|Coda|Roboto" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css?family=Bungee+Inline|Patua+One|Permanent+Marker|Sigmar+One|Comfortaa|Pompiere" rel="stylesheet">
     </head>
     <body>
-        <div class="contain-head">
-            <header class="container">
-                    <div class="row">
-                        <h1 class="col-sm-7">Real Naruto</h1>
-                        <nav class="col-sm-5 text-right">
-                            <h3><a href="http://ocampo19.github.io/">About</a></h3>
-                            <h3><a href="http://ocampo19.github.io/episodes.html">Episodes</a></h3>
-                            <h3><a href="http://ocampo19.github.io/characters.html">Characters</a></h3>
-                        </nav>
-                    </div>
-            </header>
-        </div>
-
-
-        <div class="main-container">
-            <jumbotron class="container text-center" id="jumbo">
+        <!-------------------    H E A D E R    ------------------->
+        <header>
+            <h1><a href="/html/index.html">Real Naruto</a></h1>
+            <nav>
+                <a class="nav-link" href="/HTML/index.html">Home</a>
+                <a class="nav-link" href="/HTML/episodes.html">Episodes</a>
+                <a class="nav-link" href="/HTML/characters.html">Characters</a>
+            </nav>
+        </header>
+        <!---------------------    M A I N    ---------------------->
+        <main class="main-container">
+            <figure class="quote-container">
                 <div id="faceImg-container">
-                    <img src="/images/shikamaru2.jpg">
+                    <img id="mug-shot" src="/images/shikamaru2.jpg">
                     <h2 id="face-name">Shikamaru Nara</h2>
                 </div>
-                <div class="quote-box">
-                    <div id="quote-text">
-                        <p id="quote">“Laziness is the mother of all bad habits, but ultimately she is a mother, and we should respect her.”</p>
-                    </div> <!-- quote-text -->
-                </div> <!-- quote-box -->
-                <div class="container button-container">
-                    <button id="q-button">Next Quote</button>
-                </div>
-            </jumbotron> <!-- section -->
-        </div>
-        <div id="footer-container">
-            <div class="container">
-                <footer>
-                    <div class="col-sm-2">
-                        <p id="update">Last updated 11-26-2017</p>
-                    </div>
-                    <div class="col-sm-1">
-                        <p><a href="http://ocampo19.github.io/sources.html" target='_blank'>Sources</a></p>
-                    </div>
-                </footer>
-            </div>
-        </div>
+                <blockquote id="quote-box">
+                    <p id="quote">"Laziness is the mother of all bad habits, but ultimately she is a mother, and we should respect her."</p>
+                </blockquote>
+            </figure>
+            <button type="button" value="Next Quote" id="quote-button">Next Quote</button>
+        </main>
+        <!-------------------    F O O T E R    ------------------->
+        <footer>
+            <h3>Last updated 11-26-2017</h3>
+            <a href="/HTML/sources.html" target='_blank'>Souces</a>
+        </footer>
 
         <script>
             // make an array of arrays that holds character name, photo, and quote
             var charArray = [
                 ["Itachi Uchiha", "/images/itachi.jpg", "Those who forgive themselves, and are able to accept their true nature... they are the strong ones!"],
                 ["Jiraiya", "/images/jiraiya.jpg", "Rejection is a part of any man’s life. If you can’t accept and move past rejection, or at least use it as writing material, you’re not a real man."],
-                ["Kakashi Hatake", "/images/kakashi.jpg", "Those who break the rules are scum, that's true, but those who abandon their friends are worse than scum."],
+                ["Kakashi Hatake", "/images/kakashi2.jpg", "Those who break the rules are scum, that's true, but those who abandon their friends are worse than scum."],
                 ["Madara Uchiha", "/images/madara.jpg", "When a man learns to love, he must bear the risk of hatred."],
-                ["Naruto Uzumaki", "/images/naruto.jpg", "A hero always arrives late."],
+                ["Naruto Uzumaki", "/images/naruto2.jpg", "A hero always arrives late."],
                 ["Orochimaru", "/images/orochimaru.jpg", "There probably isn’t any meaning in life. Perhaps you can find something interesting to do while you are alive. Like how you found that flower. Like how I found you."],
                 ["Sai", "/images/sai.jpg", "A smile is the best way to get away with trouble, even if it’s a fake one."],
 
@@ -67,14 +52,16 @@
 
             var index = 0;
 
-            document.getElementById('q-button').onclick = function() {
+            document.getElementById('quote-button').onclick = function() {
                 if(index > 7) {index = 0;}
             	var imageAddress = charArray[index][1];
                 var faceName = charArray[index][0];
                 var quote = charArray[index][2];
                 var faceImgContainer = document.getElementById('faceImg-container').innerHTML = '<img id="mug-shot" src="' + imageAddress + '"><h2 id="face-name">' + faceName + '</h2>';
 
-                var quoteText = document.getElementById('quote-text').innerHTML = '<p id="quote">"' + quote + '"</p>';
+                /*var quoteText = document.getElementById('quote-text').innerHTML = '<p id="quote">"' + quote + '"</p>'; */
+                var quoteText = document.getElementById('quote-box').innerHTML = '<p id="quote">"' + quote + '"</p>';
+
                 index++;
             };
         </script>

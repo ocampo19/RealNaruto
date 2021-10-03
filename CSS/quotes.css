@@ -1,100 +1,149 @@
-html {
-    background: black;
+* {
+    margin: 0;
+    padding: 0;
 }
 
-.contain-head {
-    background: black;
+body {
+    background-color: #101010;
+    border: thin dashed red;
 }
+
+/** ------------ H E A D E R ------------ **/
 
 header {
-    border: groove thin #e6e6e6;
-    padding: 17px 0;
-}
-
-header .row {
     display: flex;
-    align-items: center;
+    justify-content: space-around;
+    width: 100%;
+    margin: auto;
+    overflow: auto;
 }
 
 header h1 {
-    color: white;
-    font-family: 'Bungee Shade', cursive;
-    font-size: 4rem;
+    font-size: 55px;
+    font-family: 'Bungee Shade', sans-serif;
+}
+
+header h1 a {
+    text-decoration: none;
+    color: rgba(255, 255, 255, 0.849);
 }
 
 header nav {
-  display: flex;
-  justify-content: flex-end;
-  font-family: 'Anton', sans-serif;
+    display: flex;
+    justify-content: flex-end;
+    align-self: center;
 }
 
-nav a {
-    padding: 0 20px;
-    margin: 0;
-    color: #f35516;
+header nav .nav-link {
+    font-family: anton, sans-serif;
+    font-size: 32px;
+    padding: 10px 18px;
+    text-decoration: none;
+    color: rgb(247, 66, 0);
 }
+
+header nav .nav-link:hover {
+    text-decoration: underline;
+    color: rgb(247, 96, 0);
+}
+
+/** ------------ M A I N - C O N T A I N E R ------------ **/
 
 .main-container {
-    background: url("/images/leaf.png") repeat;
-    padding: 50px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: stretch;
+    width: 70%;
+    margin: auto;
+    padding-top: 100px;
 }
 
-#jumbo {
-    padding: 20px 0;
+.main-container .quote-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
 }
 
-.text-center {
+.quote-container #faceImg-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: rgba(255, 255, 255, 0.849);
+    width: 100%;
+}
+
+.quote-container #faceImg-container #mug-shot {
+    border-radius: 50%;
+    border: thin solid rgba(255, 255, 255, 0.849);
+    height: 250px;
+    width: auto;
+}
+
+.quote-container #faceImg-container h2 {
+    font-size: 255%;
+    margin-top: 15px;
+    font-family: 'permanent marker', 'Patua One', 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.quote-container #quote-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: thin solid white;
+    height: 180px;
+    width: 800px;
+    background: rgba(245, 245, 245, 0.959);
+    border-radius: 25px;
+    margin: 25px 0;
+}
+
+.quote-container #quote-box #quote {
     color: black;
+    text-align: center;
+    font-size: 140%;
+    font-family: comfortaa, 'Patua One', Roboto, sans-serif;
+    width: 80%;
 }
 
-#faceImg-container img {
-    border: 2px solid white;
-    border-radius: 100%;
-    display: inline-block;
-    width: 20%;
-    height: 170px;
+.main-container #quote-button {
+    width: 200px;
+    height: auto;
+    font-size: 25px;
+    padding: 15px 0;
+    margin-bottom: 180px;
+    border-radius: 25px;
+    font-family: comfortaa, Roboto, sans-serif;
 }
 
-#faceImg-container h2 {
-    padding-top: 10px;
+/** ------------ F O O T E R ------------ **/
+
+footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    color:rgba(255, 255, 255, 0.767);
+    width: 100%;
+    /*padding-top: 12%;*/
+    padding-bottom: 20px;
 }
 
-.quote-box {
-    background-color: rgba(255, 255, 255, 0.6);
-    border-radius: 5.625rem;
-    width: 50%;
-    height: 165px;
-    position: relative;
-    left: 25%;
+footer h3 {
+    border-top: solid thin rgba(255, 255, 255, 0.363);
+    padding: 12px 0 0 2%;
 }
 
-#quote-text {
-    font-family: Roboto, sans-serif;
-    font-size: 2rem;
-    padding: 1.5625rem 2.1875rem 1rem 2.1875rem;
-    margin-bottom: 20px;
-    color: black;
-    line-height: 2.7rem;
+footer a {
+    padding-top: 7px;
+    padding-left: 2%;
+    font-size: 125%;
+    color: rgb(247, 66, 0);
+    text-decoration: none;
 }
 
-#q-button {
-  font-family: Comfortaa, cursive;
-  text-align: center;
-  font-size: 1.5rem;
-  color: black;
-  padding: 0.62rem 0.875rem;
-  border-radius: 5px;
-  margin: 20px 0;
-  /*position: relative;
-  left: 46%;*/
-}
-
-footer p {
-    font-family: 'Roboto', sans-serif;
-    color: #a6a6a6;
-    padding: 10px 0;
-}
-
-#footer-container {
-    background: #262626;
+footer a:hover {
+    color: rgb(247, 96, 0);
+    text-decoration: underline;
 }
